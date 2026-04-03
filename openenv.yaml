@@ -1,0 +1,21 @@
+name: autonomous-traffic-control
+description: Traffic signal control environment with emergency vehicle priority
+
+observation_space:
+  north_queue: int
+  south_queue: int
+  east_queue: int
+  west_queue: int
+  signal: str
+  emergency: str
+  time_step: int
+
+action_space:
+  action: str
+
+reward: Incremental reward based on cars passed, waiting cars, and emergency handling
+
+tasks:
+  - easy_task
+  - medium_task
+  - hard_task
